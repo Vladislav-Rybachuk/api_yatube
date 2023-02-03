@@ -8,10 +8,8 @@ try:
     from django.utils.deprecation import RemovedInDjango40Warning
 except ImportError:
     raise ImportError(
-        'django-admin.py was deprecated in 
-        'Django 3.1 and removed in Django '
-        '4.0. Please manually remove this
-        'script from your virtual environment '
+        'django-admin.py was deprecated in Django 3.1 and removed in Django'
+        '4.0. Please manually remove thisscript from your virtual environment'
         'and use django-admin instead.'
     )
 

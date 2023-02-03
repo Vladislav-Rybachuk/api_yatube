@@ -4,8 +4,8 @@ from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
 
 from api.permissions import IsAuthorOrReadOnly
-from api.serializers import (CommentSerializer, GroupSerializer, 
-                            PostSerializer, UserSerializer)
+from api.serializers import (CommentSerializer, GroupSerializer,
+    PostSerializer, UserSerializer)
 from posts.models import Group, Post, User
 
 
@@ -47,9 +47,3 @@ class CommentViewSet(viewsets.ModelViewSet):
         '''Метод создания нового комментария по нужному посту'''
         post = get_object_or_404(Post, pk=self.kwargs.get('post_id'))
         serializer.save(author=self.request.user, post=post)
-
-
-
-
-
-
